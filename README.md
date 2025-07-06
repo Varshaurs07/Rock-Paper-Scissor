@@ -5,13 +5,13 @@ A simple interactive **Rock Paper Scissors** game built using **HTML, CSS, and J
 ## 📸 Preview
 
 ### 🟢 Game Start
-![Start](images/start.png)
+![Start](images/Start.png)
 
 ### ✅ User Wins
-![User Win](images/userWin.png)
+![User Win](images/UserWin.png)
 
 ### ❌ User Loses
-![User Lose](images/userLose.png)
+![User Lose](images/UserLose.png)
 
 ### 🤝 Draw Match
 ![Draw](images/DrawMatch.png)
