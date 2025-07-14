@@ -18,6 +18,26 @@ const drawGame = () => {
   msg.style.backgroundColor = "#081b31";
 };
 
+const checkGameOver = () => {
+  if (userScore === 10 || compScore === 10) {
+    choices.forEach((choice) => {
+      choice.disabled = true; 
+    });
+
+    if (userScore === 10) {
+      msg.innerText = "🎉 You reached 10! You are the final winner!";
+      msg.style.backgroundColor = "green";
+    } else {
+      msg.innerText = "💻 Computer reached 10! You lost the game.";
+      msg.style.backgroundColor = "red";
+    }
+
+    setTimeout(() => {
+      resetGame();
+    }, 3000);
+  }
+};
+
 const showWinner = (userWin, userChoice, compChoice) => {
   if (userWin) {
     userScore++;
@@ -30,6 +50,8 @@ const showWinner = (userWin, userChoice, compChoice) => {
     msg.innerText = `You lost. ${compChoice} beats your ${userChoice}`;
     msg.style.backgroundColor = "red";
   }
+
+  checkGameOver();
 };
 
 const playGame = (userChoice) => {
@@ -47,6 +69,19 @@ const playGame = (userChoice) => {
     }
     showWinner(userWin, userChoice, compChoice);
   }
+};
+
+const resetGame = () => {
+  userScore = 0;
+  compScore = 0;
+  userScorePara.innerText = userScore;
+  compScorePara.innerText = compScore;
+  msg.innerText = "New Game! Make your move.";
+  msg.style.backgroundColor = "#081b31";
+
+  choices.forEach((choice) => {
+    choice.disabled = false; 
+  });
 };
 
 choices.forEach((choice) => {
