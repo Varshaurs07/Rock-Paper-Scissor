@@ -31,3 +31,8 @@ A simple interactive **Rock Paper Scissors** game built using **HTML, CSS, and J
 - **JavaScript** – for game logic and interactivity
 
 
+## 🔗 Live Demo
+
+👉 [Click here to try Rock-Paper-Scissors]( https://varshaurs07.github.io/Rock-Paper-Scissor/)
+
+
